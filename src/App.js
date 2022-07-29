@@ -1,10 +1,11 @@
-import { HomePageComponent  } from './Components/';
+import { HomePageComponent } from './Components/';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './assets/css/style.scss';
 
 function App() {
   return (
-    <>
+    <>   
+
       <HomePageComponent />
 
     </>

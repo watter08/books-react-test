@@ -1,0 +1,128 @@
+:root {
+  /* Color palette  */
+  --default: #999999;
+  --red: #E74C3C;
+  --blue: #3498DB;
+  --purple: #9B59B6;
+  --yellow: #FEB506;
+  --green: #62CB31;
+  
+  /* Background colors */
+  --bg-from: #1C3744;
+  --bg-to: #1E5372;
+  
+  /* Card color */
+  --bg-card: #fafafa;
+  --bg-card-hover: #dadada;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+body{
+  font-family: 'Italiana', Roboto;
+}
+
+.ToasContainerorder{
+  z-index:9999999999;
+
+}
+
+.navbar{
+  background-color: #f6f2f2;
+  color: #282c34;
+  text-align: center;
+}
+.navbar-brand { color: #282c34;}
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+.Card{
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--default);
+  border-left: 1px solid var(--default);
+  border-right: 1px solid var(--default);
+}
+
+.Card:hover {
+  background-color: var(--bg-card-hover);
+}
+
+.CardHeader{
+  position: relative;
+  align-items: center;
+  top: -25px !important;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 0;
+  background:red;
+}
+
+.CardHeader.blue {
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  color:#fff;
+}
+
+.btn {
+  width: 8rem;
+}
+
+.btn-danger {
+  background-color: #eb4511;
+  background-image: linear-gradient(315deg, #eb4511 0%, #b02e0c 74%);
+  font-weight: 500;  
+}
+
+.btn-success {
+  background-color: #3bb78f;
+  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+  font-weight: 500;  
+}
+.CardFooter.blue {
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  color:#fff;
+}
+
+.ModalHeader{
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  color:#fff;
+  text-justify: center;
+}

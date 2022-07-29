@@ -9,23 +9,37 @@ function CardComponent({
     description,
     pageCount,
     excerpt,
-    publishDate
+    publishDate,
+    handleShow,
+    DeleteBook
 }) {
     return (
-        <div className="p-3">
-            <Card className="text-center">
-                <Card.Header>{title}</Card.Header>
-                <Card.Body>
+        <div className="pt-3 pb-5">
+            <Card className="text-center Card">
+                <Card.Header className="CardHeader blue">{title}</Card.Header>
+                <Card.Body className="">
                     <Card.Title>{description}</Card.Title>
                     <Card.Text>
                         {excerpt}
                     </Card.Text>
                     <div>
-                        <button className="btn btn-danger  m-1">Eliminar</button>
-                        <button className="btn btn-success m-1">Actualizar</button>
+                        <button className="btn btn-danger  m-1" onClick={() => DeleteBook(id)}>Eliminar</button>
+                        <button className="btn btn-success m-1" 
+                        onClick={() => {
+                            handleShow({  
+                                id,
+                                title,
+                                description,
+                                pageCount,
+                                excerpt,
+                                publishDate,
+                                handleShow})}}
+                        >
+                            Actualizar
+                        </button>
                     </div>
                 </Card.Body>
-                <Card.Footer className="text-muted">{publishDate}</Card.Footer>
+                <Card.Footer className="CardFooter blue">{publishDate}</Card.Footer>
             </Card>
         </div>
 
